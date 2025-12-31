@@ -1,0 +1,21 @@
+name: NewWorldExtraction
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Har 10 minute baad chalega
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Start Money Machine
+        run: |
+          echo "Connecting to the Grid..."
