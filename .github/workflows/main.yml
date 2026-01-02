@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install Dependencies
-        run: pip install requests
+        run: pip install requests aiohttp
       - name: Trigger the Extraction Engine
         env:
           NP_TOKENS: ${{ secrets.NP_TOKENS }}
